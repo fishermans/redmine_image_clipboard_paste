@@ -438,6 +438,9 @@ jQuery.event.props.push('dataTransfer');
             var text = null;
             jsToolBar.prototype.elements.img.fn.wiki.call({
                 encloseSelection: function(prefix, suffix, fn) {
+                    if (window.devicePixelRatio > 1) {
+                        prefix += '{width:50%}';
+                    }
                     text = prefix + name + suffix;
                 }
             })
